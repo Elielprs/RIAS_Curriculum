@@ -1,0 +1,377 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+ <title>Curriculum Formulario</title>
+ <link rel="stylesheet" href="CSS/style.css">
+ <script type="text/javascript" src="js/data.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>C U R R I C U L U M</h1>
+    </center>
+    <form id="formulario" method="POST" action="#">
+        <div class="div-gen">
+            <div class="info-personal">
+                <center><p>Información Personal</p></center>
+                <div>
+                    <label for="foto">Fotografía: </label>
+                    <input type="file" id="foto" name="foto" accept="image /png, .jpeg, .jpg" required>
+                </div>
+                <div>
+                    <label for="nombre">Nombre: </label>
+                    <input class="campos" type="text" id="nombre" name="nombre" pattern="[a-zA-Z]*" required="required" onkeypress="return validaTexto(event)" align="lefth">
+                </div>
+                <div>
+                    <label for="apellidoP">Apellido Paterno: </label>
+                    <input class="campos" type="text" id="apellidoP" name="apellidoP" pattern="[a-zA-Z]*" required="required" onkeypress="return validaTexto(event)">
+                </div>
+                <div>
+                    <label for="apellidoM">Apellido Materno: </label>
+                    <input class="campos" type="text" name="apellidoM" id="apellidoM" pattern="[a-zA-Z]*" required="required" onkeypress="return validaTexto(event)">
+                </div>
+                <div>
+                    <label for="rfc">RFC: </label>
+                    <input class="campos" type="text" name="rfc" id="rfc" required="required">
+                </div>
+                <div>
+                    <label for="edad">Edad </label>
+                    <select class="campos" name="select" id="select">
+                        <option value="" selected>Seleccione edad</option> 
+                        <option value="18">18</option> 
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sexo">G&eacute;nero: </label>
+                    <input type="radio" id="Sexo" name="Sexo" value="Masculino" required="required" />M
+                    <input type="radio" id="Sexo" name="Sexo" value="Femenino" required="required" />F
+                    <input type="radio" id="Sexo" name="Sexo" value="Otro" required="required" />Otro
+                </div>
+                <div>
+                    <label for="fechaN">Fecha de nacimiento: </label>
+                    <input class="campos" type="date" id="fechaN" name="fechaN" required>
+                </div>
+                <div>
+                    <label>Estado Civil: </label>
+                    <input type="radio" id="civil" name="civil" value="civil" required="required" />Soltero
+                    <input type="radio" id="civil" name="civil" value="civil" required="required" />Casado
+                    <input type="radio" id="civil" name="civil" value="civil" required="required" />Viudo
+                </div>
+                <div>
+                    <label for="tMovil">Tel&eacute;fono movil: </label>
+                    <input class="campos" type="tel" id="tMovil" pattern="[0-9]*" placeholder="Diez digitos" maxlength="10" required="required" />
+                </div>
+                <div>
+                    <label for="Email">Email</label>
+                    <input class="campos" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" 
+                        placeholder="mail@ejemplo.com" id="Email" required="required" />
+                </div>
+                <div>
+                    <label for="domicilio">Domicilio: </label>
+                    <input class="campos" type="text" id="domicilio" name="domicilio" maxlength="30" required="required">
+                </div>
+                <div>
+                    <label for="nacionalidad">Nacionalidad: </label>
+                    <input type="radio" id="nacionalidad" name="nacionalidad" value="nacionalidad" required="required">Mexicana
+                    <input type="radio" id="nacionalidad" name="nacionalidad" value="nacionalidad" required="required">Otro
+                </div>
+                <div>
+                    <label for="estado">Estado: </label>
+                    <select class="campos" name="estado" id="estado">
+                        <option value="">Seleccione Estado</option>
+                        <option value="CDMX">CDMX</option>
+                        <option value="Nuevo Leon">Nuevo Le&oacute;n</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Tabasco">Tabasco</option>
+                        <option value="Tlaxcala">Tlaxcala</option>
+                        <option value="Veracruz">Veracruz</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ciudad">Ciudad: </label>
+                    <select class="campos" name="ciudad" id="ciudad">
+                        <option value="">Seleccione Estado</option>
+                        <option value="Cordoba">Cordoba</option>
+                        <option value="Fortin">Fort&iacute;n</option>
+                        <option value="Nogales">Nogales</option>
+                        <option value="Orizaba">Orizaba</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Tehuacan">Tehuacan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="info-esc">
+                <center><p>Formaci&oacute;n Acad&eacute;mica</p></center>
+                <div>
+                    <label for="GradoE">Grado M&aacute;ximo de Estudios: </label>
+                    <select class="campos" name="GradoE" id="GradoE">
+                        <option value="">Selecciona una opci&oacute;n</option>
+                        <option value="SinEstudios">Sin Estudios</option>
+                        <option value="Primaria">Primaria</option>
+                        <option value="Secundaria">Secundaria</option>
+                        <option value="Bachillerato">Bachillerato</option>
+                        <option value="Licenciatura">Licenciatura</option>
+                        <option value="Maestria">Maestr&iacute;a</option>
+                        <option value="Doctorado">Doctorado</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="Titulo">¿Titulado?</label>
+                    <input type="radio" name="Titulo" value="SI" required="required" />Si
+                    <input type="radio" name="Titulo" value="NO" required="required" />No
+                </div>
+                <div>
+                    <label for="obTitulo">Fecha de obtenci&oacute;n: </label>
+                    <input class="campos" type="date" id="obTitulo" name="obTitulo">
+                </div>
+                <div>
+                    <label for="cedula">C&eacute;dula Profesional: </label>
+                    <input class="campos" type="text" id="cedula" name="cedula" pattern="[0-9]*" maxlength="7">
+                </div>
+                <div>
+                    <label for="intitucion">Instituci&oacute;n de Egreso: </label>
+                    <input class="campos" type="text" id="institucion" name="institucion" maxlength="30" onkeypress="return validaTexto(event)">
+                </div>
+                <div class="ref">
+                    <label for="formacionA">Formaci&oacute;n adicional: </label>
+                    <textarea class="areas" name="formacionA"  id ="formacionA" placeholder="Ingresa el nombre de los cursos y conferencias recibidos"></textarea>
+                </div>
+            </div>
+
+            <div class="info-lab">
+                <center><p>Experiencia Profesional</p></center>
+                <div>
+                    <label for="NomEmp" id="nomUltEmp">Nombre de la ultima empresa:</label>
+                    <input class="campos" type="text" id="NomEmp" required="required" />
+                </div>
+                <div>
+                    <label for="DirEmp" id="DirUltEmp">Direccion de la empresa:</label>
+                    <input class="campos" type="text" id="DirEmp" required="required" />
+                </div>
+                <div>
+                    <label for="PuestoD" id="UltPues">Puesto:</label>
+                    <input class="campos" type="text" id="PuestoD" required="required" />
+                </div>
+                <div>
+                    <label for="sueldo">Sueldo Percibido: </label>
+                    <input class="campos" type="text" name="sueldo" id="sueldo" maxlength="6" pattern="[0-9]*" required="required">
+                </div>
+                <div>
+                    <label for="Calendario" id="FechaDeInicio">Fecha de inicio:</label>
+                    <input class="campos" type="date" name="fecha" id="FechaI" size="8" required="required" /> <br>
+                    <label for="Calendario" id="FechaDeFin">Fecha de terminación:</label>
+                    <input class="campos" type="date" name="fecha" id="FechaF" size="8" required="required" />
+                </div>
+                <div>
+                    <label for="jefeInme">Nombre de jefe inmediato:</label>
+                    <input class="campos" type="text" id="NomJefe" required="required" onkeypress="return validaTexto(event)" />
+                </div>
+                <div>
+                    <label for="Telefono">Telefono </label>
+                    <label>Movil:</label>
+                    <input class="campos" type="tel" id="telmovilE" pattern="[0-9]*" placeholder="Diez digitos" maxlength="10" required="required"/> <br>
+                    <label>Ext: </label>
+                    <input class="campos" type="tel" id="ext" required="required"/>
+                </div>
+                <div class="ref">
+                    <label for="labores">Labores desempeñadas: </label>
+                    <textarea class="areas" name="labores" id="labores" required="required"></textarea>
+                </div>
+            </div>
+
+            <div class="info-ref">
+                <center><p>Referencias</p></center>
+                <div class="ref">
+                    <label for="referencia1">Referencia 1: </label>
+                    <textarea class="areas" name="referencia1" id="referencia1" placeholder="Ingresa datos de referencia"></textarea>
+                </div>
+                <div class="ref">
+                    <label for="referencia2">Referencia 2: </label>
+                    <textarea class="areas" name="referencia2" id="referencia2" placeholder="Ingresa datos de referencia"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <button class="botones" type="button" onclick="validarFormulario()">Enviar</button>
+            <button class="botones" id="cancel" type="button" onclick="cancelar()">Cancelar</button> 
+        </center>
+    </form>
+
+    <div id="MuestraDatos" hidden="true">
+
+        <center>
+          <fieldset id="PintaDatos">
+
+        
+                <div class="div-gen">
+                    <div class="info-personal">
+                        <center><p>Información Personal</p></center>
+                        <div>
+                            <label id="fotografía">Fotografía: </label>
+                        </div>
+                        <div>
+                            <label id="N"><strong>Nombre: </strong></label><label id="pnombre"></label>
+                        </div>
+                        <div>
+                            <label id="R"><strong>RFC: </strong></label><label id="pRFC"></label>
+                        </div>
+                        <div>
+                            <label id="EDD"><strong>Edad: </strong></label><label id="pEdad"></label>
+                        </div>
+                        <div>
+                            <label id="S"><strong>Género: </strong></label><label id="pSexo"></label>
+                        </div>
+                        <div>
+                            <label id="FN"><strong>Fecha de nacimiento: </strong></label><label id="pfechaN"></label>
+                        </div>
+                        <div>
+                            <label id="C"><strong>Estado Civil: </strong></label><label id="pCivil"></label>
+                        </div>
+                        <div>
+                            <label id="TC"><strong>Tel&eacute;fono Movil: </strong></label><label id="TelMovil"></label>
+                        </div>
+                        <div>
+                            <label id="Em"><strong>Email:</strong></label><label id="pEmail"></label>
+                        </div>
+                        <div>
+                            <label for="D"><strong>Domicilio: </strong></label><label id="pDom"></label>
+                        </div>
+                        <div>
+                            <label for="NM"><strong>Nacionalidad: </strong></label></label><label id="pNacionalidad"></label>
+                        </div>
+                        <div>
+                            <label for="ED"><strong>Estado: </strong></label><label id="pEstado"></label>
+                        </div>
+                        <div>
+                            <label for="CD"><strong>Ciudad: </strong></label><label id="pCiudad"></label>
+                        </div>
+                    </div>
+        
+                    <div class="info-esc">
+                        <center><p>Formaci&oacute;n Acad&eacute;mica</p></center>
+                        <div>
+                            <label for="GE"><strong>Grado M&aacute;ximo de Estudios: </strong></label><label id="pGradoE"></label>
+                        </div>
+                        <div>
+                            <label for="OT"><strong>Fecha de obtenci&oacute;n: </strong></label><label id="pObTit"></label>
+                        </div>
+                        <div>
+                            <label for="CED"><strong>C&eacute;dula Profesional: </strong></label><label id="pCedula"></label>
+                        </div>
+                        <div>
+                            <label for="INTS"><strong>Instituci&oacute;n de Egreso: </strong></label><label id="pEgreso"></label>
+                        </div>
+                        <div class="ref">
+                            <label for="FA"><strong>Formaci&oacute;n adicional: </strong></label><label id="pAdicional"></label>
+                        </div>
+                    </div>
+        
+                    <div class="info-lab">
+                        <center><p>Experiencia Profesional</p></center>
+                        <div>
+                            <label for="NomEmp" id="UEMP"><strong>Nombre de la ultima empresa: </strong></label><label id="pUltEmp"></label>
+                        </div>
+                        <div>
+                            <label for="DirEmp" id="DUMP"><strong>Direccion de la empresa: </strong></label><label id="pDirUltEmp"></label>
+                        </div>
+                        <div>
+                            <label for="PuestoD" id="UP"><strong>Puesto: </strong></label><label id="UltPuesto"></label>
+                        </div>
+                        <div>
+                            <label for="SU"><strong>Sueldo Percibido: </strong></label><label id="UltSueldo"></label>
+                        </div>
+                        <div>
+                            <label for="Calendario" id="FI"><strong>Fecha de inicio: </strong></label><label id="pfecha_i"></label>
+                            <label for="Calendario" id="FFIN"><strong>Fecha de terminación: </strong></label><label id="pfecha_f"></label>
+                        </div>
+                        <div>
+                            <label for="JI"><strong>Nombre de jefe inmediato: </strong></label><label id="UltimoJefe"></label>
+                        </div>
+                        <div>
+                            <label for="Telefono"><strong>Telefono Movil: </strong></label><label id="pMovil"></label> <br>
+                            <label><strong>Ext: </strong></label><label id="pExt"></label>
+                        </div>
+                        <div class="ref">
+                            <label for="labores"><strong>Labores desempeñadas: </strong></label><label id="pLabores"></label>
+                        </div>
+                    </div>
+        
+                    <div class="info-ref">
+                        <center><p>Referencias</p></center>
+                        <div class="ref">
+                            <label for="referencia1"><strong>Referencia 1: </strong></label><label id="pRef1"></label>
+                        </div>
+                        <div class="ref">
+                            <label for="referencia2"><strong>Referencia 2: </strong></label><label id="pRef2"></label>
+                        </div>
+                    </div>
+                </div>
+         </fieldset>
+        </center>
+      
+        <br><br>
+      
+        <div id="reg">
+          <center>
+            <button class="botones" id="RegresaForm" type="button" onclick="MuestraForm()" hidden="true">Regresar</button> 
+            <br><a href="#MuestraDatos"> Ir arriba </a><br></pre></center>
+          </center>
+        </div>
+      </div>
+
+</body>
+</html>
