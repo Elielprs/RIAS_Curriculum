@@ -95,7 +95,7 @@ label{
 
 @media (max-width: 480px){
     .info-personal, .info-esc, .info-lab, .info-ref{
-        width: 1000px;
+        width: 700px;
     }
     
     p{
