@@ -93,9 +93,9 @@ label{
     background-color: rgba(51, 51, 51, 0.650);
 }
 
-@media (max-width: 980px){
+@media (max-width: 480px){
     .info-personal, .info-esc, .info-lab, .info-ref{
-        width: 460px;
+        width: 700px;
     }
     
     p{
@@ -110,7 +110,7 @@ label{
     
     label{
         font-family: 'Times New Roman', Times, serif;
-        font-size: 30px;
+        font-size: 40px;
     }
     
     .campos{
