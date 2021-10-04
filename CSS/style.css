@@ -93,7 +93,7 @@ label{
     background-color: rgba(51, 51, 51, 0.650);
 }
 
-@media (max-width: 550px){
+@media (max-width: 980px){
     .info-personal, .info-esc, .info-lab, .info-ref{
         width: 460px;
     }
